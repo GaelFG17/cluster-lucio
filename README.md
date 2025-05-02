@@ -1,4 +1,4 @@
-# 🛠️ Configuración de Clusters de BD en Mongo DB con docker compose en React
+# 🛠️ Configuración de Clusters de BD en Mongo DB con docker compose
 
 Este proyecto detalla cómo configurar un **Replica Set** de MongoDB en dos computadoras utilizando Docker y autenticación con un **keyfile**. Los pasos están diseñados para ser fáciles de seguir y asegurar que ambos nodos estén sincronizados de manera eficiente.
 
