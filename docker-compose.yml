@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: chatdb1  # Agregué el nombre del contenedor
+    restart: always
+    ports:
+      - "27019:27017"  # El puerto externo es 27019
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: chat  # Nombre de la base de datos inicial
+    command: ["mongod", "--replSet", "rs0", "--keyFile", "/data/configdb/mongodb-keyfile"]
+    volumes:
+      - ./mongo_data:/data/db  # Volumen persistente
+      - ./mongodb-keyfile:/data/configdb/mongodb-keyfile
