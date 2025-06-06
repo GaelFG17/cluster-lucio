@@ -20,14 +20,14 @@ Primero, generamos un archivo de clave para asegurar la autenticación entre los
 
 ```bash
 openssl rand -base64 756 > mongodb-keyfile
-chmod 400 mongodb-keyfile
+chmod 600 mongodb-keyfile
 
 ```
 > 📝 **Nota:** El archivo generado en **PC1** debe ser enviado a **PC2**.  
 > Una vez copiado, en **PC2** ejecuta el siguiente comando para otorgar los permisos adecuados:
 
 ```bash
-chmod 400 mongodb-keyfile
+chmod 600 mongodb-keyfile
 ```
 ### 🧩 2. Configurar el `docker-compose.yml` en PC1 y PC2
 
